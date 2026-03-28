@@ -33,7 +33,7 @@ nav {
   position: fixed;
   top:0; left:0; right:0;
   z-index: 100;
-  padding: 12px 52px;
+  padding: 0px 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +163,7 @@ nav {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 55fr 45fr;
-  padding-top: 72px;
+  padding-top: 80px;
 }
 
 .hero-left {
@@ -421,11 +421,11 @@ section { border-top: 1px solid rgba(168,72,50,0.08); }
 .s-label {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--terra);
-  margin-bottom: 18px;
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -508,7 +508,7 @@ section { border-top: 1px solid rgba(168,72,50,0.08); }
 
 /* ── ABOUT ── */
 .about {
-  padding: 100px 64px;
+  padding: 70px 64px;
   display: grid;
   grid-template-columns: 4fr 6fr;
   gap: 80px;
@@ -810,7 +810,7 @@ section { border-top: 1px solid rgba(168,72,50,0.08); }
 
 /* ── APPROACH ── */
 .approach {
-  padding: 100px 64px;
+  padding: 60px 64px;
   background: var(--linen);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1109,9 +1109,13 @@ footer {
   .services { padding: 60px 28px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .test-grid { grid-template-columns: 1fr; }
-  .insurance, .states, .testimonials { padding: 60px 28px; }
+  .insurance, .states, .testimonials { padding: px 28px; }
   footer { grid-template-columns: 1fr; gap: 36px; padding: 40px 28px; }
   .footer-bottom { padding: 16px 28px; flex-direction: column; gap: 6px; }
+}
+/* fix anchor link scrolling for fixed navbar */
+section, .hero-left {
+  scroll-margin-top: 60px;
 }
 </style>
 </head>
@@ -1119,7 +1123,11 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="logo.png" alt="Hemphill Counseling Services" style="height:80px;width:auto;display:block;"></div>
+ <div class="nav-logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Hemphill Counseling Services" style="height:80px;width:auto;display:block;">
+  </a>
+</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
