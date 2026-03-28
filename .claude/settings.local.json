@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(powershell -Command \"\\(Get-Content ''hemphill-website.html'' -Raw\\) -replace ''style=\"\"height:36px;width:auto;display:block;\"\"'', ''style=\"\"height:80px;width:auto;display:block;\"\"'' | Set-Content ''hemphill-website.html'' -NoNewline\")",
+      "Bash(python3 -c \":*)",
+      "Read(//c/Users/carlt/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/077875b1-91c9-4111-9afc-bbf34a7acacf/1abed17c-98b1-483b-83ff-8545f90c18a5/skills/docx/**)",
+      "Bash(python scripts/office/unpack.py \"C:/Users/carlt/OneDrive/Documents/Claude/Projects/Website/HCS_Website_Copy_Review.docx\" \"C:/Users/carlt/OneDrive/Documents/Claude/Projects/Website/review_unpacked/\")",
+      "Bash(pandoc \"C:/Users/carlt/OneDrive/Documents/Claude/Projects/Website/HCS_Website_Copy_Review.docx\" -o /tmp/review_output.md)",
+      "Read(//tmp/**)",
+      "mcp__c1fc4002-5f49-5f9d-a4e5-93c4ef5d6a75__google_drive_search",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(echo $SHELL)",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install defusedxml -q)",
+      "Bash(pandoc \"C:/Users/carlt/OneDrive/Documents/Claude/Projects/Website/HCS_Website_Copy_Review.docx\" --track-changes=all -o /tmp/review.md)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}
