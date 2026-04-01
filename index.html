@@ -1014,45 +1014,79 @@ section { border-top: 1px solid rgba(168,72,50,0.08); }
   letter-spacing: 0.05em;
 }
 
+.cta-left-photo {
+  position: relative;
+  background: var(--dusk);
+  overflow: hidden;
+  min-height: 500px;
+}
+
 .cta-photo {
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  object-position: top;
-  margin-top: 36px;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
   display: block;
+  position: absolute;
+  inset: 0;
 }
 
-.cta-btn-group {
+.cta-paths {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 36px;
+  gap: 16px;
   position: relative;
   z-index: 1;
+  margin-bottom: 28px;
 }
 
-.cta-btn-group .cta-book-btn {
+.cta-path-card {
+  border-left: 3px solid var(--terra);
+  padding: 18px 20px;
+  background: rgba(249,244,236,0.05);
+}
+
+.cta-path-card--quiet {
+  border-left-color: rgba(249,244,236,0.2);
+  background: rgba(249,244,236,0.02);
+}
+
+.cta-path-label {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  margin-bottom: 6px;
+}
+
+.cta-path-desc {
+  font-size: 13px;
+  color: rgba(249,244,236,0.5);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.cta-path-card .cta-book-btn {
   margin-top: 0;
+  padding: 14px 28px;
+  font-size: 10px;
 }
 
 .cta-supervision-link {
-  text-align: center;
-  margin-top: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.cta-supervision-link a {
   font-size: 12px;
   color: rgba(249,244,236,0.4);
   text-decoration: underline;
   font-family: 'Syne', sans-serif;
   letter-spacing: 0.04em;
   transition: color 0.2s;
+  display: inline-block;
+  margin-top: 4px;
 }
 
-.cta-supervision-link a:hover {
+.cta-supervision-link:hover {
   color: rgba(249,244,236,0.7);
 }
 
@@ -1147,7 +1181,10 @@ footer {
   .hero { grid-template-columns: 1fr; }
   .hero-left { padding: 48px 28px; }
   .hero-right { min-height: 320px; }
-  .who, .about, .approach, .cta-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 28px; }
+  .who, .about, .approach { grid-template-columns: 1fr; gap: 40px; padding: 60px 28px; }
+  .cta-section { grid-template-columns: 1fr; gap: 0; padding: 0; }
+  .cta-left-photo { min-height: 380px; }
+  .cta-right { padding: 48px 28px; }
   .services { padding: 60px 28px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .test-grid { grid-template-columns: 1fr; }
@@ -1440,23 +1477,29 @@ Feeling seen is not a soft outcome. It is the foundation for everything else.<st
 
 <!-- CTA -->
 <section class="cta-section" id="contact" style="border:none;">
-  <div>
-    <div class="s-label">Ready to Begin</div>
-    <h2 class="cta-title">If this sounds like the right fit, the next step is simple.</h2>
-    <p class="cta-body">If you are ready to work with someone who can hold the identity, the patterns, and the complexity, book directly below. Booking is the first step.</p>
+  <div class="cta-left-photo">
     <img src="footer-headshot.png" alt="Carlton Hemphill" class="cta-photo">
   </div>
   <div class="cta-right">
-    <div class="cta-steps">
-      <div class="cta-step"><div class="cta-step-num">1</div><div class="cta-step-body"><div class="cta-step-title">Choose Your Path</div><div class="cta-step-text">Select insurance via Headway or self-pay via SimplePractice. Both go directly to scheduling.</div></div></div>
-      <div class="cta-step"><div class="cta-step-num">2</div><div class="cta-step-body"><div class="cta-step-title">Enter Your Information</div><div class="cta-step-text">Choose an available appointment time and complete the intake process. Everything is online.</div></div></div>
-      <div class="cta-step"><div class="cta-step-num">3</div><div class="cta-step-body"><div class="cta-step-title">You're Booked</div><div class="cta-step-text">I receive a notification, confirm your appointment, and send your paperwork. You'll have everything you need before your first session.</div></div></div>
+    <div class="s-label" style="color:rgba(249,244,236,0.5);margin-bottom:20px;">Ready to Begin</div>
+    <h2 class="cta-title" style="color:var(--parchment);margin-bottom:32px;">Choose your path.</h2>
+    <div class="cta-paths">
+      <div class="cta-path-card">
+        <div class="cta-path-label">Using Insurance</div>
+        <div class="cta-path-desc">Book through Headway. They verify your benefits and handle billing directly with your insurance.</div>
+        <a href="https://care.headway.co/providers/carlton-hemphill?utm_source=pem&utm_medium=direct_link&utm_campaign=103944" class="cta-book-btn">Book with Insurance</a>
+      </div>
+      <div class="cta-path-card">
+        <div class="cta-path-label">Self-Pay</div>
+        <div class="cta-path-desc">Book through SimplePractice. Select a time, complete intake, and pay per session.</div>
+        <a href="https://carlton-hemphill.clientsecure.me/request/service" class="cta-book-btn">Book Self-Pay</a>
+      </div>
+      <div class="cta-path-card cta-path-card--quiet">
+        <div class="cta-path-label">Supervision or Consultation</div>
+        <div class="cta-path-desc">For clinicians seeking supervision or consultation on neurodivergent and affirming care.</div>
+        <a href="mailto:carlton@hemphillcounselingservices.com" class="cta-supervision-link">Email Carlton directly</a>
+      </div>
     </div>
-    <div class="cta-btn-group">
-      <a href="https://care.headway.co/providers/carlton-hemphill?utm_source=pem&utm_medium=direct_link&utm_campaign=103944" class="cta-book-btn">Book with Insurance — Headway</a>
-      <a href="https://carlton-hemphill.clientsecure.me/request/service" class="cta-book-btn">Book Self-Pay — SimplePractice</a>
-    </div>
-    <div class="cta-supervision-link"><a href="mailto:carlton@hemphillcounselingservices.com">For supervision or consultation, email me directly.</a></div>
     <div class="cta-note">Accepting new clients · AZ · CA · FL · ID · IL · WA</div>
   </div>
 </section>
