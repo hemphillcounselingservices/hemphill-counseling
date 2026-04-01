@@ -1014,6 +1014,48 @@ section { border-top: 1px solid rgba(168,72,50,0.08); }
   letter-spacing: 0.05em;
 }
 
+.cta-photo {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: top;
+  margin-top: 36px;
+  display: block;
+}
+
+.cta-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-btn-group .cta-book-btn {
+  margin-top: 0;
+}
+
+.cta-supervision-link {
+  text-align: center;
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-supervision-link a {
+  font-size: 12px;
+  color: rgba(249,244,236,0.4);
+  text-decoration: underline;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.cta-supervision-link a:hover {
+  color: rgba(249,244,236,0.7);
+}
+
 /* ── FOOTER ── */
 footer {
   background: var(--charcoal);
@@ -1400,17 +1442,21 @@ Feeling seen is not a soft outcome. It is the foundation for everything else.<st
 <section class="cta-section" id="contact" style="border:none;">
   <div>
     <div class="s-label">Ready to Begin</div>
-    <h2 class="cta-title">No phone calls necessary.<br><em>No free consults.</em><br>Just therapy.</h2>
-    <p class="cta-body">If you are ready to work with someone who can hold all of it — the identity, the patterns, the complexity — book directly through the link below. No phone screening. Booking itself is the first step.</p>
-    <a href="https://linktr.ee/hemphillcounselingservices" class="btn-primary">Book a Session</a>
+    <h2 class="cta-title">If this sounds like the right fit, the next step is simple.</h2>
+    <p class="cta-body">If you are ready to work with someone who can hold the identity, the patterns, and the complexity, book directly below. Booking is the first step.</p>
+    <img src="footer-headshot.png" alt="Carlton Hemphill" class="cta-photo">
   </div>
   <div class="cta-right">
     <div class="cta-steps">
-      <div class="cta-step"><div class="cta-step-num">1</div><div class="cta-step-body"><div class="cta-step-title">Book Through Linktree</div><div class="cta-step-text">No phone call required. Select your session type and schedule directly.</div></div></div>
-      <div class="cta-step"><div class="cta-step-num">2</div><div class="cta-step-body"><div class="cta-step-title">Complete the Intake Form</div><div class="cta-step-text">You will receive an intake form before your first session. Take your time with it.</div></div></div>
-      <div class="cta-step"><div class="cta-step-num">3</div><div class="cta-step-body"><div class="cta-step-title">First Session</div><div class="cta-step-text">We reviews your intake, asks follow-up questions, and orients to what you came in for. No masks required.</div></div></div>
+      <div class="cta-step"><div class="cta-step-num">1</div><div class="cta-step-body"><div class="cta-step-title">Choose Your Path</div><div class="cta-step-text">Select insurance via Headway or self-pay via SimplePractice. Both go directly to scheduling.</div></div></div>
+      <div class="cta-step"><div class="cta-step-num">2</div><div class="cta-step-body"><div class="cta-step-title">Enter Your Information</div><div class="cta-step-text">Choose an available appointment time and complete the intake process. Everything is online.</div></div></div>
+      <div class="cta-step"><div class="cta-step-num">3</div><div class="cta-step-body"><div class="cta-step-title">You're Booked</div><div class="cta-step-text">I receive a notification, confirm your appointment, and send your paperwork. You'll have everything you need before your first session.</div></div></div>
     </div>
-    <a href="https://linktr.ee/hemphillcounselingservices" class="cta-book-btn">Book Now — No Phone Calls</a>
+    <div class="cta-btn-group">
+      <a href="https://care.headway.co/providers/carlton-hemphill?utm_source=pem&utm_medium=direct_link&utm_campaign=103944" class="cta-book-btn">Book with Insurance — Headway</a>
+      <a href="https://carlton-hemphill.clientsecure.me/request/service" class="cta-book-btn">Book Self-Pay — SimplePractice</a>
+    </div>
+    <div class="cta-supervision-link"><a href="mailto:carlton@hemphillcounselingservices.com">For supervision or consultation, email me directly.</a></div>
     <div class="cta-note">Accepting new clients · AZ · CA · FL · ID · IL · WA</div>
   </div>
 </section>
