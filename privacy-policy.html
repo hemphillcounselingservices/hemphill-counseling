@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Hemphill Counseling Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --terra:     #C4562A;
+  --sand:      #E0C494;
+  --parchment: #F5EEE4;
+  --linen:     #EDE6D8;
+  --charcoal:  #2C1810;
+  --smoke:     #5C3D2E;
+  --dusk:      #2C1810;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  background: var(--parchment);
+  color: var(--charcoal);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 100;
+  padding: 0 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c1810;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-logo img { height: 80px; width: auto; display: block; }
+
+.nav-back {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 1; }
+
+/* ── PAGE ── */
+.page-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+}
+
+.page-eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terra);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.page-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--terra);
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.page-title em { font-style: italic; color: var(--terra); }
+
+.page-date {
+  font-size: 12px;
+  color: var(--smoke);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-bottom: 56px;
+  opacity: 0.6;
+}
+
+.page-intro {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--smoke);
+  font-weight: 300;
+  margin-bottom: 56px;
+  border-left: 3px solid var(--sand);
+  padding-left: 20px;
+}
+
+/* ── SECTIONS ── */
+.policy-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(168,72,50,0.08);
+}
+
+.policy-section:last-of-type { border-bottom: none; }
+
+.policy-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 16px;
+}
+
+.policy-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--smoke);
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section a {
+  color: var(--terra);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,86,42,0.3);
+  transition: border-color 0.2s;
+}
+
+.policy-section a:hover { border-color: var(--terra); }
+
+.policy-section strong {
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dusk);
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-legal {
+  font-size: 11px;
+  color: rgba(249,244,236,0.28);
+  letter-spacing: 0.04em;
+}
+
+.footer-legal a {
+  color: rgba(249,244,236,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: rgba(249,244,236,0.8); }
+
+@media (max-width: 600px) {
+  nav { padding: 0 20px; }
+  .page-wrap { padding: 120px 24px 80px; }
+  footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Hemphill Counseling Services">
+    </a>
+  </div>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Privacy <em>Policy</em></h1>
+  <div class="page-date">Effective Date: February 10, 2026 &nbsp;·&nbsp; Hemphill Counseling Services, PLLC</div>
+
+  <p class="page-intro">This Privacy Policy describes how Hemphill Counseling Services, PLLC ("HCS," "we," "us") collects and handles information submitted through this website. It applies to this public website only — not to clinical records or protected health information, which are governed separately by our Notice of Privacy Practices provided at intake.</p>
+
+  <div class="policy-section">
+    <h2>What This Policy Covers</h2>
+    <p>This policy applies to <strong>hemphillcounselingservices.com</strong> and any information you submit through it — such as sending an email inquiry using the contact address listed on this site. It does not apply to the SimplePractice or Headway client portals, which are governed by their own privacy policies and by HIPAA.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Information We Collect</h2>
+    <p><strong>Information you provide voluntarily.</strong> If you contact us by email, we receive the information you include in that message — typically your name, email address, and the content of your inquiry. We do not operate a contact form on this website. All direct contact occurs via email or through the Headway or SimplePractice booking portals.</p>
+    <p><strong>Information collected automatically.</strong> This website does not currently use tracking pixels, advertising cookies, or third-party analytics tools such as Google Analytics. Standard server logs may record basic technical information such as the date and time of a request and the type of browser used. This information is not linked to any individual and is not used for marketing purposes.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>How We Use Your Information</h2>
+    <p>Information submitted via email is used solely to respond to your inquiry and, if you proceed to schedule services, to facilitate your care. We do not sell, rent, or share your contact information with third parties for marketing purposes.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Clinical Records and HIPAA</h2>
+    <p>This website is not a clinical platform. If you are an existing or prospective client, your protected health information (PHI) is handled in accordance with our <strong>Notice of Privacy Practices</strong>, which is provided separately through your client portal at intake. For questions about your clinical records or privacy rights under HIPAA, please contact us directly at <a href="mailto:Carlton@HemphillCounselingServices.com">Carlton@HemphillCounselingServices.com</a>.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Third-Party Services</h2>
+    <p>This website links to Headway and SimplePractice for booking. Once you leave this site and interact with those platforms, their respective privacy policies apply. We encourage you to review them before submitting personal information.</p>
+    <p>This site uses Google Fonts, which may result in a request to Google's servers when the page loads. No personally identifiable information is transmitted in this process.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Cookies</h2>
+    <p>This website does not use tracking or advertising cookies. Your browser may store basic session data as part of normal web operation, but no cookies are placed by HCS for analytics, retargeting, or marketing purposes.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Children's Privacy</h2>
+    <p>This website is intended for adults. We do not knowingly collect personal information from individuals under the age of 18 through this website. HCS does not provide therapy services to minors.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The effective date at the top of this page will reflect the most recent revision. Continued use of this website after any update constitutes acceptance of the revised policy.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>Contact</h2>
+    <p>Questions about this Privacy Policy may be directed to:<br><br>
+    <strong>Carlton Hemphill, LCPC, LMHC, BC-TMH, NCC</strong><br>
+    Hemphill Counseling Services, PLLC<br>
+    <a href="mailto:Carlton@HemphillCounselingServices.com">Carlton@HemphillCounselingServices.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-legal">&copy; 2025 Hemphill Counseling Services, PLLC &nbsp;·&nbsp; All rights reserved</span>
+  <span class="footer-legal">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="disclosures.html">Disclosures</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">Home</a>
+  </span>
+</footer>
+
+</body>
+</html>
