@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disclosures — Hemphill Counseling Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --terra:     #C4562A;
+  --sand:      #E0C494;
+  --parchment: #F5EEE4;
+  --linen:     #EDE6D8;
+  --charcoal:  #2C1810;
+  --smoke:     #5C3D2E;
+  --dusk:      #2C1810;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  background: var(--parchment);
+  color: var(--charcoal);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 100;
+  padding: 0 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c1810;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-logo img { height: 80px; width: auto; display: block; }
+
+.nav-back {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 1; }
+
+/* ── PAGE ── */
+.page-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 40px 100px;
+}
+
+.page-eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--terra);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.page-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--terra);
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.page-title em { font-style: italic; color: var(--terra); }
+
+.page-date {
+  font-size: 12px;
+  color: var(--smoke);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-bottom: 56px;
+  opacity: 0.6;
+}
+
+.page-intro {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--smoke);
+  font-weight: 300;
+  margin-bottom: 56px;
+  border-left: 3px solid var(--sand);
+  padding-left: 20px;
+}
+
+/* ── LICENSURE TABLE ── */
+.license-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 48px;
+  border: 1px solid rgba(168,72,50,0.12);
+}
+
+.license-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  gap: 0;
+  border-bottom: 1px solid rgba(168,72,50,0.08);
+  transition: background 0.15s;
+}
+
+.license-row:last-child { border-bottom: none; }
+.license-row:hover { background: rgba(168,72,50,0.03); }
+
+.license-row.header {
+  background: var(--dusk);
+  pointer-events: none;
+}
+
+.license-cell {
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--smoke);
+  font-weight: 300;
+  line-height: 1.5;
+  border-right: 1px solid rgba(168,72,50,0.08);
+}
+
+.license-cell:last-child { border-right: none; }
+
+.license-row.header .license-cell {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(249,244,236,0.4);
+  border-right-color: rgba(255,255,255,0.06);
+}
+
+.license-cell strong {
+  display: block;
+  color: var(--charcoal);
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.license-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--terra);
+  letter-spacing: 0.04em;
+}
+
+/* ── SECTIONS ── */
+.policy-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(168,72,50,0.08);
+}
+
+.policy-section:last-of-type { border-bottom: none; }
+
+.policy-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 16px;
+}
+
+.policy-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--smoke);
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section a {
+  color: var(--terra);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,86,42,0.3);
+  transition: border-color 0.2s;
+}
+
+.policy-section a:hover { border-color: var(--terra); }
+
+.policy-section strong {
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+/* ── STATE NOTICE CARDS ── */
+.notice-card {
+  background: var(--linen);
+  border-left: 3px solid var(--terra);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.notice-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 10px;
+}
+
+.notice-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--smoke);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.notice-card a {
+  color: var(--terra);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,86,42,0.3);
+}
+
+.notice-card a:hover { border-color: var(--terra); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dusk);
+  padding: 40px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-legal {
+  font-size: 11px;
+  color: rgba(249,244,236,0.28);
+  letter-spacing: 0.04em;
+}
+
+.footer-legal a {
+  color: rgba(249,244,236,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: rgba(249,244,236,0.8); }
+
+@media (max-width: 600px) {
+  nav { padding: 0 20px; }
+  .page-wrap { padding: 120px 24px 80px; }
+  .license-row { grid-template-columns: 1fr; }
+  .license-cell { border-right: none; border-bottom: 1px solid rgba(168,72,50,0.08); padding: 12px 16px; }
+  .license-row.header { display: none; }
+  footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Hemphill Counseling Services">
+    </a>
+  </div>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Licensure &amp; <em>Disclosures</em></h1>
+  <div class="page-date">Hemphill Counseling Services, PLLC &nbsp;·&nbsp; Carlton Hemphill, LCPC, LMHC, BC-TMH, NCC</div>
+
+  <p class="page-intro">I am authorized to provide psychotherapy services via telehealth in the following states. You may verify my credentials and disciplinary history with each state's licensing board at any time.</p>
+
+  <!-- LICENSURE TABLE -->
+  <div class="license-grid">
+    <div class="license-row header">
+      <div class="license-cell">State</div>
+      <div class="license-cell">License Type</div>
+      <div class="license-cell">License Number</div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>Arizona</strong></div>
+      <div class="license-cell">Licensed Professional Counselor</div>
+      <div class="license-cell"><span class="license-num">LPC-24496</span></div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>California</strong></div>
+      <div class="license-cell">Licensed Professional Clinical Counselor</div>
+      <div class="license-cell"><span class="license-num">LPCC21526</span></div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>Florida</strong></div>
+      <div class="license-cell">Registered Telehealth Provider</div>
+      <div class="license-cell"><span class="license-num">TPMC6413</span></div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>Idaho</strong></div>
+      <div class="license-cell">Mental or Behavioral Telehealth — Counselor</div>
+      <div class="license-cell"><span class="license-num">3571697</span></div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>Illinois</strong></div>
+      <div class="license-cell">Licensed Clinical Professional Counselor</div>
+      <div class="license-cell"><span class="license-num">180.015245</span></div>
+    </div>
+    <div class="license-row">
+      <div class="license-cell"><strong>Washington</strong></div>
+      <div class="license-cell">Licensed Mental Health Counselor</div>
+      <div class="license-cell"><span class="license-num">LH61599142</span></div>
+    </div>
+  </div>
+
+  <!-- STATE-REQUIRED NOTICES -->
+  <div class="policy-section">
+    <h2>State-Required Client Notices</h2>
+
+    <div class="notice-card">
+      <h3>Notice to California Clients</h3>
+      <p>The Board of Behavioral Sciences receives and responds to complaints regarding services provided within the scope of practice of Licensed Professional Clinical Counselors. You may contact the Board at:</p>
+      <p style="margin-top:12px;">
+        <a href="https://www.bbs.ca.gov" target="_blank">www.bbs.ca.gov</a><br>
+        Phone: (916) 574-7830<br>
+        Board of Behavioral Sciences<br>
+        1625 North Market Blvd., Suite S-200<br>
+        Sacramento, CA 95834
+      </p>
+    </div>
+
+    <div class="notice-card">
+      <h3>Notice to Florida Clients</h3>
+      <p>You may verify my telehealth registration and credentials through the Florida Health Source telehealth provider directory at <a href="https://flhealthsource.gov/telehealth/" target="_blank">flhealthsource.gov/telehealth</a>.</p>
+    </div>
+  </div>
+
+  <!-- TELEHEALTH SCOPE -->
+  <div class="policy-section">
+    <h2>Telehealth Scope of Practice</h2>
+    <p>Services are provided exclusively via telehealth (video and, where applicable, audio-only). You must be physically located in a state where I am licensed — Arizona, California, Florida, Idaho, Illinois, or Washington — at the time of each session. If you are traveling outside these states, we cannot legally meet.</p>
+    <p>At your first session, you will be asked to confirm your identity on camera with a valid photo ID. At the start of each session, you will confirm your full name and current physical location. California clients: verbal location confirmation is required by California Business and Professions Code §2290.5 and documented in your chart.</p>
+  </div>
+
+  <!-- CREDENTIALS -->
+  <div class="policy-section">
+    <h2>National Credentials</h2>
+    <p><strong>National Certified Counselor (NCC)</strong> — Issued by the National Board for Certified Counselors (NBCC). Confirms completion of graduate-level counseling education, supervised clinical experience, and passage of the National Counselor Examination (NCE).</p>
+    <p><strong>Board Certified — Telemental Health (BC-TMH)</strong> — Issued by the NBCC. Confirms specialized training and competency in the ethical and clinical delivery of telehealth mental health services.</p>
+  </div>
+
+  <!-- NOTICE OF PRIVACY PRACTICES -->
+  <div class="policy-section">
+    <h2>Notice of Privacy Practices (HIPAA)</h2>
+    <p>Your protected health information is governed by a separate <strong>Notice of Privacy Practices</strong>, provided to all clients at intake through the SimplePractice or Headway client portal. That document describes how your health information may be used and disclosed, your rights under HIPAA, and how to file a complaint if you believe your privacy rights have been violated.</p>
+    <p>For questions or to request a copy, contact: <a href="mailto:Carlton@HemphillCounselingServices.com">Carlton@HemphillCounselingServices.com</a></p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="policy-section">
+    <h2>Contact</h2>
+    <p>
+      <strong>Carlton Hemphill, LCPC, LMHC, BC-TMH, NCC</strong><br>
+      Hemphill Counseling Services, PLLC<br>
+      <a href="mailto:Carlton@HemphillCounselingServices.com">Carlton@HemphillCounselingServices.com</a><br>
+      <a href="https://hemphillcounselingservices.com">hemphillcounselingservices.com</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-legal">&copy; 2025 Hemphill Counseling Services, PLLC &nbsp;·&nbsp; All rights reserved</span>
+  <span class="footer-legal">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="disclosures.html">Disclosures</a>
+    &nbsp;·&nbsp;
+    <a href="index.html">Home</a>
+  </span>
+</footer>
+
+</body>
+</html>
