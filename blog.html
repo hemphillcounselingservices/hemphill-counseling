@@ -4,16 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Hemphill Counseling Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Writing on neurodivergence, OCD, LGBTQ+ mental health, and the practice of insight-first care, from Carlton Hemphill, LCPC.">
+<link rel="canonical" href="https://hemphillcounselingservices.com/blog.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hemphill Counseling Services">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://hemphillcounselingservices.com/blog.html">
+<meta property="og:title" content="Blog — Hemphill Counseling Services">
+<meta property="og:description" content="Writing on neurodivergence, OCD, LGBTQ+ mental health, and the practice of insight-first care, from Carlton Hemphill, LCPC.">
+<meta property="og:image" content="https://hemphillcounselingservices.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Carlton Hemphill, LCPC, of Hemphill Counseling Services.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Hemphill Counseling Services">
+<meta name="twitter:description" content="Writing on neurodivergence, OCD, LGBTQ+ mental health, and the practice of insight-first care, from Carlton Hemphill, LCPC.">
+<meta name="twitter:image" content="https://hemphillcounselingservices.com/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --terra:     #C4562A;
-  --sand:      #E0C494;
-  --parchment: #F5EEE4;
-  --linen:     #EDE6D8;
-  --charcoal:  #2C1810;
-  --smoke:     #5C3D2E;
-  --dusk:      #2C1810;
+  /* Phase A recolor → PLUM + Gold (alternate palette — the blog is its own zone). Names kept. */
+  --terra:     #57306A;  /* Primary — PLUM */
+  --sand:      #F1CB3A;  /* Accent — GOLD (constant across both palettes) */
+  --parchment: #F5F6F5;  /* Background — ground */
+  --linen:     #ECEFEE;  /* Surface */
+  --charcoal:  #181A1E;  /* Text */
+  --smoke:     #4A5052;  /* Sub text */
+  --dusk:      #241830;  /* Deep plum ground */
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -35,7 +53,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2c1810;
+  background: #241830;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -63,22 +81,93 @@ nav {
   background: var(--terra) !important;
   color: var(--parchment) !important;
   padding: 11px 26px !important;
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700 !important;
   font-size: 11px !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase;
+  border: 1.5px solid #F1CB3A;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+
+.nav-cta:hover { box-shadow: 0 0 16px 2px rgba(241,203,58,0.55); transform: translateY(-1px); }
+
+/* ── HAMBURGER ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--parchment);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-dropdown {
+  display: none;
+  position: fixed;
+  top: 104px;
+  left: 0; right: 0;
+  background: #241830;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 99;
+  padding: 16px 0 20px;
+}
+
+.nav-dropdown.open { display: block; }
+
+.nav-dropdown ul { list-style: none; display: flex; flex-direction: column; }
+
+.nav-dropdown ul li a {
+  display: block;
+  padding: 14px 28px;
+  font-size: 14px;
+  color: var(--parchment);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-dropdown ul li a:hover { color: var(--terra); background: rgba(255,255,255,0.04); }
+
+.nav-dropdown ul li:last-child a {
+  margin: 12px 24px 0;
+  padding: 12px 20px;
+  background: var(--terra);
+  color: var(--parchment);
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: none;
 }
 
 /* ── PAGE HEADER ── */
 .blog-header {
-  padding: 160px 64px 80px;
+  padding: 108px 64px 80px;
   background: var(--dusk);
-  border-bottom: 1px solid rgba(232,197,160,0.1);
+  border-bottom: 1px solid rgba(241,203,58,0.1);
 }
 
 .page-eyebrow {
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.28em;
@@ -98,7 +187,7 @@ nav {
 }
 
 .blog-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Newsreader', serif;
   font-size: clamp(42px, 5.5vw, 68px);
   font-weight: 600;
   line-height: 1.06;
@@ -110,8 +199,8 @@ nav {
 
 .blog-subtitle {
   font-size: 16px;
-  color: rgba(249,244,236,0.5);
-  font-weight: 300;
+  color: rgba(241,233,245,0.5);
+  font-weight: 400;
   line-height: 1.7;
   max-width: 560px;
 }
@@ -127,7 +216,7 @@ nav {
 .coming-soon-icon {
   width: 64px;
   height: 64px;
-  border: 2px solid rgba(196,86,42,0.2);
+  border: 2px solid rgba(87,48,106,0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -146,7 +235,7 @@ nav {
 }
 
 .coming-soon h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Newsreader', serif;
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 600;
   color: var(--charcoal);
@@ -159,7 +248,7 @@ nav {
 .coming-soon p {
   font-size: 16px;
   color: var(--smoke);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.85;
   max-width: 480px;
   margin: 0 auto 48px;
@@ -181,7 +270,7 @@ nav {
 }
 
 .topic-label {
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 9px;
   letter-spacing: 0.22em;
@@ -191,7 +280,7 @@ nav {
 }
 
 .topic-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Newsreader', serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--charcoal);
@@ -203,19 +292,19 @@ nav {
   font-size: 13px;
   color: var(--smoke);
   line-height: 1.65;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .topic-coming {
   display: inline-block;
   margin-top: 16px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 8px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(196,86,42,0.5);
-  border: 1px solid rgba(196,86,42,0.2);
+  color: rgba(87,48,106,0.5);
+  border: 1px solid rgba(87,48,106,0.2);
   padding: 4px 10px;
 }
 
@@ -241,14 +330,14 @@ nav {
   position: absolute;
   width: 300px; height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(168,72,50,0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(87,48,106,0.2), transparent 70%);
   top: -150px; right: -100px;
 }
 
 .blog-cta p {
   font-size: 15px;
-  color: rgba(249,244,236,0.5);
-  font-weight: 300;
+  color: rgba(241,233,245,0.5);
+  font-weight: 400;
   margin-bottom: 24px;
   position: relative;
   z-index: 1;
@@ -259,7 +348,7 @@ nav {
   background: var(--terra);
   color: var(--parchment);
   padding: 14px 36px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.15em;
@@ -286,24 +375,49 @@ footer {
 
 .footer-legal {
   font-size: 11px;
-  color: rgba(249,244,236,0.28);
+  color: rgba(241,233,245,0.55);
   letter-spacing: 0.04em;
 }
 
 .footer-legal a {
-  color: rgba(249,244,236,0.45);
+  color: rgba(241,233,245,0.68);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.footer-legal a:hover { color: rgba(249,244,236,0.8); }
+.footer-legal a:hover { color: rgba(241,233,245,0.8); }
 
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
-  .blog-header { padding: 140px 28px 60px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .blog-header { padding: 104px 28px 60px; }
   .coming-soon { padding: 80px 24px 100px; }
   .topic-grid { grid-template-columns: 1fr; }
   footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Real-post cards. Unused until the first post ships; exists so the
+   POST TEMPLATE block in the body pastes in working, with no CSS to write.
+   Reuses .topic-card / .topic-label / .topic-title / .topic-desc. ── */
+.topic-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(87,48,106,0.22);
+}
+.topic-title a:hover {
+  color: var(--terra);
+  border-bottom-color: var(--sand);
+}
+.topic-date {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(87,48,106,0.5);
 }
 </style>
 </head>
@@ -312,7 +426,7 @@ footer {
 <nav>
   <div class="nav-logo">
     <a href="index.html">
-      <img src="logo.png" alt="Hemphill Counseling Services">
+      <img src="logo-nav.svg" alt="Hemphill Counseling Services">
     </a>
   </div>
   <ul class="nav-links">
@@ -321,10 +435,25 @@ footer {
     <li><a href="index.html#insurance">Insurance</a></li>
     <li><a href="index.html#approach">Approach</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="disclosures.html">Legal</a></li>
+    <li><a href="disclosures.html">Disclosures</a></li>
     <li><a href="index.html#contact" class="nav-cta">Book a Session</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="nav-dropdown" id="nav-dropdown">
+  <ul>
+    <li><a href="index.html#about" class="dropdown-link">About</a></li>
+    <li><a href="index.html#services" class="dropdown-link">Services</a></li>
+    <li><a href="index.html#insurance" class="dropdown-link">Insurance</a></li>
+    <li><a href="index.html#approach" class="dropdown-link">Approach</a></li>
+    <li><a href="blog.html" class="dropdown-link">Blog</a></li>
+    <li><a href="disclosures.html" class="dropdown-link">Disclosures</a></li>
+    <li><a href="index.html#contact" class="dropdown-link">Book a Session</a></li>
+  </ul>
+</div>
 
 <!-- HEADER -->
 <div class="blog-header">
@@ -347,7 +476,31 @@ footer {
 
   <div class="divider"></div>
 
-  <!-- TOPIC PREVIEWS -->
+  <!-- ═══════════════════════════════════════════════════════════════════
+       POST TEMPLATE — how to add a post. No script, no build step.
+
+       1. Give the post its own page: copy this file, delete everything
+          between <body> and </body> except the nav and footer, and drop
+          the post in. Update its <title>, meta description, canonical,
+          and og: tags to match the post. One post = one URL, which is
+          the only way a post can rank in search on its own.
+       2. Copy the block below out of this comment and paste it as the
+          FIRST child of .topic-grid. Newest post sits first.
+       3. Add the post's URL to sitemap.xml.
+       4. Once a real post is live, delete the "coming soon" heading and
+          the three "Coming Soon" topic cards. They are placeholders.
+       5. One push per post. See the tracker: a deploy is 15 credits, so
+          batch a session's edits rather than pushing each typo fix.
+
+       <div class="topic-card">
+         <div class="topic-label">CATEGORY</div>
+         <div class="topic-title"><a href="POST-FILENAME.html">POST TITLE</a></div>
+         <div class="topic-desc">One or two sentences in your own voice. Not a hook.</div>
+         <span class="topic-date">MONTH DAY, YEAR</span>
+       </div>
+       ═══════════════════════════════════════════════════════════════════ -->
+
+  <!-- TOPIC PREVIEWS — placeholders. Delete when the first real post ships. -->
   <div class="topic-grid">
     <div class="topic-card">
       <div class="topic-label">Neurodivergence</div>
@@ -386,6 +539,25 @@ footer {
     <a href="index.html">Home</a>
   </span>
 </footer>
+
+<script>
+(function() {
+  var btn = document.getElementById('nav-hamburger');
+  var dropdown = document.getElementById('nav-dropdown');
+  if (!btn || !dropdown) return;
+  btn.addEventListener('click', function() {
+    btn.classList.toggle('open');
+    dropdown.classList.toggle('open');
+  });
+  // close the menu when any link inside it is tapped
+  dropdown.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      btn.classList.remove('open');
+      dropdown.classList.remove('open');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
